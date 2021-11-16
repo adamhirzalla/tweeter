@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/common.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,17 +42,30 @@
       </div>
       <br>
       <div>
-          <h2 class="mt-0 mb-0">Adam Hirzalla</h2>
+          <h2 class="mt-0 mb-0 normal text-white"><span class="text-dark strong">Adam</span> Hirzalla</h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="flex-col center">
-      <div>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa, facilis dolorem nemo vero recusandae et dolor repudiandae neque, sunt pariatur quod at dolores ratione quaerat eligendi adipisci modi beatae?</h3>
-      </div>
-    
-      
-     
+    <main>
+      <section class="new-tweet">
+
+        <div class="tweet-header mt-1 mb-1">
+          <label for="tweet-text text-black"><strong>What are you humming about?</strong></label>
+        </div>
+        
+        <form action="/tweets/" method="post">
+        <div class="text-area">
+            <textarea name="text" id="tweet-text"></textarea>
+        </div>
+        <div class="tweet-footer text-bungee mt-1">
+            <button class="btn-yellow text-dark" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+        </form>
+
+      </section>
     </main>
+
+    
   </body>
 </html>

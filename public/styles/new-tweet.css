@@ -1,0 +1,39 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-header {
+  display: flex;
+  justify-self: flex-start;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  min-height: 3.8em;
+  min-width: 100%;
+  max-width: 100%;
+  font-weight: bolder;
+  color: #151515;
+  padding-bottom: .5em;
+  border: none;
+  border-bottom: 3px solid #232323;
+  background: none;
+  resize: none;
+  overflow: visible;
+  font-size: 80%;
+  line-height: 1;
+}
+#tweet-text:focus-visible {
+  outline-width: 0ch;
+}

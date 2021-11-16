@@ -18,8 +18,20 @@
 .jc-sb {
   justify-content: space-between;
 }
+.jc-fs {
+  justify-content: flex-start;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
 .ai-sb {
   align-items: space-between;
+}
+.ai-fs {
+  align-items: flex-start;
+}
+.ai-fe {
+  align-items: flex-end;
 }
 .color-red {
   color: #EC3F22;
@@ -30,17 +42,57 @@
 .mt-0 {
   margin-top: 0;
 }
+.mt-1 {
+  margin-top: 1em;
+}
+.mt-2 {
+  margin-top: 2em;
+}
 .mb-0 {
   margin-bottom: 0;
+}
+.mb-1 {
+  margin-bottom: 1em;
+}
+.mb-2 {
+  margin-bottom: 2em;
 }
 .ml-0 {
   margin-left: 0;
 }
+.ml-1 {
+  margin-left: 1em;
+}
+.ml-2 {
+  margin-left: 2em;
+}
 .mr-0 {
   margin-right: 0;
 }
-.container {
- display: flex;
- justify-content: center;
- align-items: center;
+.mr-1 {
+  margin-right: 1em;
+}
+.mr-2 {
+  margin-right: 2em;
+}
+.btn-yellow {
+  background-color: #FFB612;
+}
+.text-white {
+  color: #f4f1ec;
+}
+.text-black {
+  color: #151515;
+}
+.text-dark {
+  color: #545149;
+}
+.strong {
+  font-weight: bolder;
+}
+.normal {
+  font-weight:normal;
+}
+.italic {
+  font-style: italic;
 }

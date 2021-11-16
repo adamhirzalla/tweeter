@@ -18,9 +18,9 @@
   display: flex;
   justify-content: space-between;
 }
-
+/* 14.6em for 140 char */
 #tweet-text {
-  min-height: 3.8em;
+  min-height: 4.2em;
   min-width: 100%;
   max-width: 100%;
   font-weight: bolder;
@@ -32,8 +32,7 @@
   resize: none;
   overflow: visible;
   font-size: 80%;
-  line-height: 1;
 }
 #tweet-text:focus-visible {
-  outline-width: 0ch;
+  outline-width: 0;
 }

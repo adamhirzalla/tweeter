@@ -25,6 +25,14 @@ nav span {
 }
 
 .nav-icon-1 {
-  margin-top: -1em;
-  color: red;
+  color: #EC3F22;
+}
+
+.nav-normal-span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-sticky {
+  position: sticky;
+  top: 0;
 }

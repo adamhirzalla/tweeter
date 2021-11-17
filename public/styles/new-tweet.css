@@ -13,12 +13,12 @@
   flex-direction: column;
 }
 
-
 .tweet-footer {
   display: flex;
   justify-content: space-between;
   
 }
+
 /* 14.6em for 140 char */
 #tweet-text {
   font-weight: bolder;

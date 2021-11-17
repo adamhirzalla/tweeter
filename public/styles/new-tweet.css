@@ -17,6 +17,7 @@
 .tweet-footer {
   display: flex;
   justify-content: space-between;
+  
 }
 /* 14.6em for 140 char */
 #tweet-text {
@@ -25,13 +26,13 @@
   max-width: 100%;
   font-weight: bolder;
   color: #151515;
-  padding-bottom: .5em;
   border: none;
-  border-bottom: 3px solid #232323;
   background: none;
   resize: none;
   overflow: visible;
   font-size: 80%;
+  border-bottom: 3px solid #232323;
+  margin-bottom: 10px;
 }
 #tweet-text:focus-visible {
   outline-width: 0;

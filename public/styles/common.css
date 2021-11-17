@@ -24,6 +24,12 @@
 .jc-fe {
   justify-content: flex-end;
 }
+.js-fs {
+  justify-self: flex-start;
+}
+.ai-center {
+  align-items: center;
+}
 .ai-sb {
   align-items: space-between;
 }
@@ -107,4 +113,7 @@
 }
 .italic {
   font-style: italic;
+}
+.small {
+  font-size: small;
 }

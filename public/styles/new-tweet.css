@@ -21,15 +21,12 @@
 }
 /* 14.6em for 140 char */
 #tweet-text {
-  min-height: 4.2em;
-  min-width: 100%;
-  max-width: 100%;
   font-weight: bolder;
   color: #151515;
   border: none;
   background: none;
   resize: none;
-  overflow: visible;
+  overflow: auto;
   font-size: 80%;
   border-bottom: 3px solid #232323;
   margin-bottom: 10px;

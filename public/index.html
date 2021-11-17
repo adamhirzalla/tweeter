@@ -47,16 +47,17 @@
           <h2 class="mt-0 mb-0 normal text-white"><span class="text-dark strong">Adam</span> Hirzalla</h2>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
 
+    <!-- Page-specific (main) content here -->
     <main>
+      <!-- Creating new tweets -->
       <section class="new-tweet">
         <div class="tweet-header mt-1 mb-1">
           <label for="tweet-text text-black"><strong>What are you humming about?</strong></label>
         </div>
         <form action="/tweets/" method="post">
         <div class="text-area">
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea name="text" id="tweet-text" placeholder="type here..."></textarea>
         </div>
         <div class="tweet-footer text-bungee">
             <button class="btn-yellow text-dark" type="submit">Tweet</button>
@@ -65,13 +66,14 @@
         </form>
       </section>
       <br>
+      <!-- Tweets articles -->
       <section id="tweets-area">
         <article>
           <article class="tweet">
-            <div class="header">
+            <header class="header">
               <h2>name</h2>
               <h3>handle</h3>
-            </div>
+            </header>
             <div class="text-area text-black strong">
               <p class="ml-1">text</p>
             </div>

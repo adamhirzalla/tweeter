@@ -27,3 +27,6 @@
   padding-left: .8rem;
   padding-right: .8rem;
 }
+.tweet i:hover {
+  color: #FFB612;
+}

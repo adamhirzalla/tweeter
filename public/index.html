@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -47,26 +48,40 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
+
     <main>
       <section class="new-tweet">
-
         <div class="tweet-header mt-1 mb-1">
           <label for="tweet-text text-black"><strong>What are you humming about?</strong></label>
         </div>
-        
         <form action="/tweets/" method="post">
         <div class="text-area">
             <textarea name="text" id="tweet-text"></textarea>
         </div>
-        <div class="tweet-footer text-bungee mt-1">
+        <div class="tweet-footer text-bungee">
             <button class="btn-yellow text-dark" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
         </form>
-
+      </section>
+      <br>
+      <section id="tweets-area">
+        <article>
+          <article class="tweet">
+            <div class="header">
+              <h2>name</h2>
+              <h3>handle</h3>
+            </div>
+            <div class="text-area text-black strong">
+              <p class="ml-1">text</p>
+            </div>
+            <footer class="footer strong">
+              <p>posted:</p>
+              <p>icons</p>
+            </footer>
+          </article>
+        </article>
       </section>
     </main>
-
-    
   </body>
 </html>

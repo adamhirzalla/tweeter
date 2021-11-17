@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-undef */
 /*
  * Client-side JS logic goes here
@@ -7,25 +8,25 @@
 
 $(document).ready(() => {
   const tweet = (tweetObj) => {
+    const { user, content, created_at } = tweetObj;
     const $tweet = $(
       `<article class="tweet grow-tweet">
     <header class="header">
       <div class="flex-row ai-center">
-        <img class="avatar" src="${tweetObj.user.avatars}">
-        <h2 class="name">${tweetObj.user.name}</h2>
+        <img class="avatar" src="${user.avatars}">
+        <h2 class="name">${user.name}</h2>
       </div>
-      <h3 class="handle">${tweetObj.user.handle}</h3>
+      <h3 class="handle">${user.handle}</h3>
     </header>
     <div class="text-area text-black strong">
-      <p class="ml-1">${tweetObj.content.text}</p>
+      <p class="ml-1">${content.text}</p>
     </div>
     <footer class="footer strong">
-      <p class="small">${timeago.format(tweetObj.created_at)}</p>
+      <p class="small">${timeago.format(created_at)}</p>
       <p><i class="grow-icon far fa-flag mr-1"></i><i class="grow-icon fas fa-retweet mr-1"></i><i class="grow-icon far fa-heart"></i></p>
     </footer>
   </article>`
     );
-  
     return $tweet;
   };
 
@@ -40,6 +41,18 @@ $(document).ready(() => {
   
   // Test / driver code (temporary). Eventually will get this from the server.
   const data = [
+    {
+      "user": {
+        "name": "Adam",
+        "avatars": "/images/avatar.png"
+        ,
+        "handle": "@AdamH"
+      },
+      "content": {
+        "text": "I learn from the mistakes of people who took my advice"
+      },
+      "created_at": new Date()
+    },
     {
       "user": {
         "name": "Newton",

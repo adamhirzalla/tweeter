@@ -15,6 +15,13 @@
 .tweet:hover {
   box-shadow: 4px 4px 10px;
 }
+.grow-tweet {
+  transition: all .2s ease-in-out; 
+}
+.grow-tweet:hover {
+  transform: scale(1.02);
+  cursor:pointer;
+}
 .tweet h2, h3 {
   margin: 0;
   font-size: 1.2rem;
@@ -43,6 +50,13 @@
 .tweet > footer > p {
 margin: 0;
 padding: 0;
+}
+.grow-icon {
+  transition: all .2s ease-in-out; 
+}
+.grow-icon:hover {
+  transform: scale(1.5);
+  cursor:pointer;
 }
 .tweet .fa-heart:hover {
   color: #EC3F22;

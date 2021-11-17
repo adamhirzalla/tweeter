@@ -10,6 +10,8 @@
   margin-bottom: 1em;
   border: 3px solid #232323;
   padding: 10px;
+  background-color: #FFB612;
+  background-image: url('/images/subtle-grey.png');
 }
 .tweet:hover {
   box-shadow: 4px 4px 10px;
@@ -22,7 +24,8 @@
   margin-left: 15px;
 }
 .tweet .handle {
-  color: #C9CBDF;
+  color: #545149;
+  font-size: small;
 }
 .tweet .text-area {
   font-size: 0.8em;
@@ -42,8 +45,14 @@
 margin: 0;
 padding: 0;
 }
-.tweet i:hover {
-  color: #FFB612;
+.tweet .fa-heart:hover {
+  color: #EC3F22;
+}
+.tweet .fa-retweet:hover {
+  color: #3884FF;
+}
+.tweet .fa-flag:hover {
+  color: #f4f1ec;
 }
 .tweet img, .avatar {
   width: 1.6em;

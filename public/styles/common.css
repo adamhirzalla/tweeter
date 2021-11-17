@@ -75,11 +75,23 @@
 .mr-2 {
   margin-right: 2em;
 }
+.color-white {
+  color: #f4f1ec;
+}
+.color-black {
+  color: #151515;
+}
+.color-dark {
+  color: #545149;
+}
 .color-red {
   color: #EC3F22;
 }
 .color-yellow {
   color: #FFB612;
+}
+.color-yellow-ish {
+color: #F6C455;
 }
 .color-dark {
   color: #545149;
@@ -89,21 +101,6 @@
 }
 .btn-yellow {
   background-color: #FFB612;
-}
-.text-white {
-  color: #f4f1ec;
-}
-.text-black {
-  color: #151515;
-}
-.text-dark {
-  color: #545149;
-}
-.text-yellow {
-  color: #FFB612;
-}
-.text-red {
-  color: #EC3F22;
 }
 .strong {
   font-weight: bold;

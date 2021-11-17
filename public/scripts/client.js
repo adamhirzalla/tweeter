@@ -7,6 +7,18 @@
  */
 
 $(document).ready(() => {
+
+  $('#tweet-form').submit(function(event) {
+    event.preventDefault();
+    const tweetText = $(this).serialize();
+    console.log(tweetText);
+    $.ajax({
+      type: "POST",
+      url: '/tweets/',
+      data: tweetText,
+    });
+  });
+
   const tweet = (tweetObj) => {
     const { user, content, created_at } = tweetObj;
     const $tweet = $(

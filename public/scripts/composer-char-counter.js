@@ -6,17 +6,16 @@ $(document).ready(()=>{
   // this === <textarea>
   // Saving JQuery target for counter class in $counter
   // Computing the new value of counter
+  // Change counter color to yellow if between 70 and 0
   // Change counter color to red if below 0
   // Update counter value on each input event
   $("#tweet-text").on('input', function() {
-    const $counter = $(this).parent().siblings().find('.counter');
-    const counter = 140 - $(this).val().length;
-    counter <= 70 && counter >= 0 ?
-      $counter.addClass('color-yellow') :
-      counter < 0 ?
-        $counter.removeClass('color-yellow') && $counter.addClass('color-red') :
-        $counter.removeClass('color-red') && $counter.removeClass('color-yellow');
+    const $counter = $(this).parentsUntil('.new-tweet').find('.counter');
+    const charsRemaining = 140 - $(this).val().length;
 
-    $counter.text(counter);
+    $counter.toggleClass('color-yellow', charsRemaining <= 70 && charsRemaining >= 0);
+    $counter.toggleClass('color-red', charsRemaining < 0);
+
+    $counter.text(charsRemaining);
   });
 });

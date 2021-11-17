@@ -1,6 +1,10 @@
 body > header {
   height: 400px;
   width: 100%;
-  background-color: #FFB612;
-  background-image: url('/images/subtle-grey.png');
+  background-image: url('/images/y-so-serious.png');
+}
+header img.main-avatar {
+  border: 3px solid #5F83DB;;
+  border-radius: 150px;
+  border-style:outset;
 }

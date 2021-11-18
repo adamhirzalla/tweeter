@@ -1,5 +1,10 @@
 $(document).ready(() => {
-  $('.btn-top').hide();
+
+  /* On create-new-tweet 'click' event:
+    1- Scroll all the way top
+    2- Toggle the new-tweet area (show/hide)
+    2- Once done, focus the text area for composing tweets
+  */
   $('.btn-toggle').click(() => {
     const $top = document.getElementById('top');
     
@@ -7,20 +12,5 @@ $(document).ready(() => {
     $('.new-tweet').toggle('fast',()=>{
       $('#tweet-text').focus();
     });
-  });
-
-  $('.btn-top').click(() => {
-    const $top = document.getElementById('top');
-    
-    $top.scrollIntoView();
-    $('#tweet-text').focus();
-  });
-
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.btn-top').show();
-    } else {
-      $('.btn-top').hide();
-    }
   });
 });

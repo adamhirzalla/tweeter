@@ -5,7 +5,6 @@ nav {
   color: #f4f1ec;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  opacity: 95%;
 }
 
 nav span {
@@ -19,8 +18,9 @@ nav span {
   width: 100%;
 }
 
-.btn-toggle {
+.btn-toggle:hover {
   cursor: pointer;
+  color: #5F83DB;
 }
 
 .btn-top {

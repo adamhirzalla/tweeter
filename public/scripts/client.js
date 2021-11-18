@@ -10,13 +10,26 @@ $(document).ready(() => {
 
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
-    const tweetText = $(this).serialize();
+    const $tweetText = $(this);
+    const tweetText = $tweetText.serialize();
+    const $textarea = $('#tweet-text');
     console.log(tweetText);
-    $.ajax({
-      type: "POST",
-      url: '/tweets/',
-      data: tweetText,
-    });
+    if (!$textarea.val() || $textarea.val() === "") {
+      alert('Tweet cannot be empty!');
+    } else if (tweetText.length > 140) {
+      alert('Tweet length cannot exceed 140 characters!');
+    } else {
+      $.ajax({
+        type: "POST",
+        url: '/tweets/',
+        data: tweetText,
+      })
+        .then(() => {
+          loadTweets();
+          $textarea.val('');
+          $textarea.trigger('input');
+        });
+    }
   });
 
   const tweet = (tweetObj) => {
@@ -45,17 +58,16 @@ $(document).ready(() => {
   const renderTweets = (tweetsArr) => {
     for (const tweetObj of tweetsArr) {
       const $tweet = tweet(tweetObj);
-      $('#tweets-area').append($tweet);
+      $('#tweets-area').prepend($tweet);
       console.log('Tweeted!', $tweet);
     }
-    
   };
 
   const loadTweets = () => {
     $.ajax('/tweets/', { method: 'GET' })
       .then(function(data) {
-        console.log('Success: ', data);
         renderTweets(data);
+        console.log('Loaded fresh tweets: ', data);
       });
   };
   

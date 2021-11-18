@@ -105,17 +105,14 @@ color: #F6C455;
 .border-circle-blue {
   border: 2px solid #5F83DB;;
   border-radius: 150px;
-  border-style:outset;
+  border-style: outset;
 }
 .grow-btn {
   cursor: pointer;
-  transition: all .1s ease-in-out;
+  transition: all .05s ease-in-out;
 }
 .grow-btn:hover {
-  transform: scale(1.1);
-}
-.btn {
-  cursor: pointer;
+  transform: scale(1.05);
 }
 .btn-yellow {
   background-color: #FFB612;

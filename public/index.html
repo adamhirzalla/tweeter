@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
     
     <!-- App CSS -->
@@ -27,6 +29,7 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/tweet-text-auto-grow.js"></script>
+    <script type="text/javascript" src="/scripts/form-toggle.js"></script>
   </head>
 
   <body id="top">
@@ -34,9 +37,9 @@
     <nav class="flex-row center jc-sb nav-sticky">
       <div><span class="text-bungee">Tweeter</span></div>
       
-      <div class="flex-col center">
+      <div class="flex-col center btn-toggle">
         <span class="text-source"><strong>Write</strong> a new tweet</span>
-        <a href="#top"><i class="btn fas fa-angle-double-down color-blue"></i></a>
+        <i class="fas fa-angle-double-down color-blue"></i>
       </div>
 
     </nav>
@@ -52,6 +55,9 @@
 
     <!-- Page-specific (main) content here -->
     <main>
+      <div class="btn-top grow-btn">
+        <i class="fas fa-angle-double-up flex-row center"></i>
+      </div>
       <!-- Creating new tweets -->
       <section class="new-tweet">
         <!-- Error message container -->

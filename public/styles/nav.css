@@ -39,10 +39,19 @@ nav span {
   align-content: center;
 }
 @keyframes move {
-  /* from { top: 0; left: 0; }
-  to   { top: 100px; left: 100px; } */
+  0%   {top:0px;}
+  12.5%  {top:3.5px;}
+  25%  {top:7px;}
+  37.5% {top:10.5px;}
+  50%   {top:14px;}
+  62.5%  {top:10.5px;}
+  75%  {top:7px;}
+  87.5% {top:3.5px;}
+  100%   {top:0px;}
 }
 .move {
   animation-name: move;
-  animation-duration: 10s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: relative;
 }

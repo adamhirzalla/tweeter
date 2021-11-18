@@ -19,25 +19,25 @@ header img.main-avatar {
     border-radius: 50px;
     float: left;
     position: fixed;
-    /* box-shadow: 4px 4px 4px #5F83DB; */
-    animation-name: rgb;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
   }
 
   header img.main-avatar {
     width: 230px;
     height: auto;
   }
+  .animate {
+    animation: 
+    rgb 1s infinite;
+  }
   @keyframes rgb {
-    0%   {box-shadow: 2px 2px 4px red;}
-    12.5%  {box-shadow: 2px 2px 4px yellow;}
-    25%  {box-shadow: 2px 2px 4px blue;}
-    37.5% {box-shadow: 2px 2px 4px green;}
-    50%   {box-shadow: 2px 2px 4px red;}
-    62.5%  {box-shadow: 2px 2px 4px yellow;}
-    75%  {box-shadow: 2px 2px 4px blue;}
-    87.5% {box-shadow: 2px 2px 4px green;}
-    100%   {box-shadow: 2px 2px 4px red;}
+    0%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
+    12.5%  {box-shadow: 2px 2px 4px yellow;transform: rotate(1deg)}
+    25%  {box-shadow: 2px 2px 4px blue;transform: rotate(2deg)}
+    37.5% {box-shadow: 2px 2px 4px green;transform: rotate(1deg)}
+    50%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
+    62.5%  {box-shadow: 2px 2px 4px yellow;transform: rotate(-1deg)}
+    75%  {box-shadow: 2px 2px 4px blue;transform: rotate(-2deg)}
+    87.5% {box-shadow: 2px 2px 4px green;transform: rotate(-1deg)}
+    100%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
   }
 }

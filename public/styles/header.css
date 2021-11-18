@@ -6,5 +6,38 @@ body > header {
 header img.main-avatar {
   border: 3px solid #5F83DB;;
   border-radius: 150px;
-  border-style:outset;
+  border-style: outset;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  body > header {
+    margin-left: 1em;
+    margin-top: 40px;
+    width: 330px;
+    height: 330px;
+    border-radius: 50px;
+    float: left;
+    position: fixed;
+    /* box-shadow: 4px 4px 4px #5F83DB; */
+    animation-name: rgb;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  header img.main-avatar {
+    width: 230px;
+    height: auto;
+  }
+  @keyframes rgb {
+    0%   {box-shadow: 2px 2px 4px red;}
+    12.5%  {box-shadow: 2px 2px 4px yellow;}
+    25%  {box-shadow: 2px 2px 4px blue;}
+    37.5% {box-shadow: 2px 2px 4px green;}
+    50%   {box-shadow: 2px 2px 4px red;}
+    62.5%  {box-shadow: 2px 2px 4px yellow;}
+    75%  {box-shadow: 2px 2px 4px blue;}
+    87.5% {box-shadow: 2px 2px 4px green;}
+    100%   {box-shadow: 2px 2px 4px red;}
+  }
 }

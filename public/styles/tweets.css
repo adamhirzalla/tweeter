@@ -47,8 +47,8 @@
   margin-top: 10px;
 }
 .tweet > footer > p {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .grow-icon {
   transition: all .1s ease-in-out; 

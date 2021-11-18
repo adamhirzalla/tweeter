@@ -10,10 +10,12 @@ $(document).ready(() => {
   $('#error').hide();
   
   /* On 'submit' event:
-    1- Validate if tweet is empty
+    1- Validate if tweet is empty (all-spaces is considered empty)
     2- Validate if tweet exceeds length
-    3- Make a post request with the serialized data from textarea
-    4- Once done, load the tweets again to avoid refreshing
+     * If invalid, prompt appropriate message and re-focus without POSTing*
+     * If valid, proceed*
+    3- Make a POST request with the serialized data from textarea
+    4- Once done, load the tweets again through an AJAX request to avoid refreshing
     5- Empty out the textarea
     6- Trigger an 'input' event for the counter to update/reset
   */
@@ -22,10 +24,13 @@ $(document).ready(() => {
     const $tweetText = $(this);
     const tweetText = $tweetText.serialize();
     const $textarea = $('#tweet-text');
-    if (!$textarea.val() || $textarea.val() === "") {
+    const input = $textarea.val();
+    if (!input || !input.trim().length) {
+      $textarea.focus();
       $('#error').text('Tweet cannot be empty!');
       $('#error').slideDown('fast');
     } else if (tweetText.length > 140) {
+      $textarea.focus();
       $('#error').text('Tweet length cannot exceed 140 characters!');
       $('#error').slideDown('fast');
     } else {

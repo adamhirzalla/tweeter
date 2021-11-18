@@ -38,3 +38,11 @@ nav span {
   justify-content: center;
   align-content: center;
 }
+@keyframes move {
+  /* from { top: 0; left: 0; }
+  to   { top: 100px; left: 100px; } */
+}
+.move {
+  animation-name: move;
+  animation-duration: 10s;
+}

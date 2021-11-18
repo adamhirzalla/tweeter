@@ -13,8 +13,8 @@ $(document).ready(() => {
     2- Validate if tweet exceeds length
     3- Make a post request with the serialized data from textarea
     4- Once done, load the tweets again to avoid refreshing
-    4- Empty out the textarea
-    5- Trigger an 'input' event for the counter to update/reset
+    5- Empty out the textarea
+    6- Trigger an 'input' event for the counter to update/reset
   */
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
@@ -81,7 +81,7 @@ $(document).ready(() => {
   /* loadTweets:
     1- Make an AJAX GET request to our local-db on server
     2- Once done, use the JSON data received to call renderTweets
-    * This will allow us to see the new content without refreshing *
+     * This will allow us to see the new content without refreshing *
   */
   const loadTweets = () => {
     $.ajax('/tweets/', { method: 'GET' })

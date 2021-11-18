@@ -8,7 +8,7 @@
 $(document).ready(() => {
   // Initial error message hide
   $('#error').hide();
-
+  
   /* On 'submit' event:
     1- Validate if tweet is empty
     2- Validate if tweet exceeds length
@@ -103,6 +103,7 @@ $(document).ready(() => {
   const loadTweets = () => {
     $.ajax('/tweets/', { method: 'GET' })
       .then(function(data) {
+        $('#tweets-area').empty();
         renderTweets(data);
         console.log('Loaded fresh tweets: ', data);
       });

@@ -16,7 +16,7 @@
   box-shadow: 4px 4px 10px;
 }
 .grow-tweet {
-  transition: all .2s ease-in-out; 
+  transition: all .05s ease-in-out; 
 }
 .grow-tweet:hover {
   transform: scale(1.02);
@@ -51,7 +51,7 @@ margin: 0;
 padding: 0;
 }
 .grow-icon {
-  transition: all .2s ease-in-out; 
+  transition: all .1s ease-in-out; 
 }
 .grow-icon:hover {
   transform: scale(1.5);

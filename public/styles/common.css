@@ -108,11 +108,14 @@ color: #F6C455;
   border-style:outset;
 }
 .grow-btn {
-  cursor:pointer;
-  transition: all .2s ease-in-out;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
 }
 .grow-btn:hover {
   transform: scale(1.1);
+}
+.btn {
+  cursor: pointer;
 }
 .btn-yellow {
   background-color: #FFB612;

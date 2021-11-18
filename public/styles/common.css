@@ -135,3 +135,19 @@ color: #F6C455;
 .small {
   font-size: small;
 }
+.hide {
+  display: none;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #151515;
+  font-family: 'Bungee', cursive;
+  color: #151515;
+	background-color: #FFBABA;
+  font-size: 20px;
+  opacity: 90%;
+	margin-top: 10px;
+	padding: 5px;
+	width: 100%;
+}

@@ -5,8 +5,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(() => {
+  // Initial error message hide
+  $('#error').hide();
 
   /* On 'submit' event:
     1- Validate if tweet is empty
@@ -22,10 +23,13 @@ $(document).ready(() => {
     const tweetText = $tweetText.serialize();
     const $textarea = $('#tweet-text');
     if (!$textarea.val() || $textarea.val() === "") {
-      alert('Tweet cannot be empty!');
+      $('#error').text('Tweet cannot be empty!');
+      $('#error').slideDown('fast');
     } else if (tweetText.length > 140) {
-      alert('Tweet length cannot exceed 140 characters!');
+      $('#error').text('Tweet length cannot exceed 140 characters!');
+      $('#error').slideDown('fast');
     } else {
+      $('#error').slideUp('fast');
       $.ajax({
         type: "POST",
         url: '/tweets/',

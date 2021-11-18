@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  $('.btn-top').hide();
   $('.btn-toggle').click(() => {
     const $top = document.getElementById('top');
     
@@ -13,5 +14,13 @@ $(document).ready(() => {
     
     $top.scrollIntoView();
     $('#tweet-text').focus();
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.btn-top').show();
+    } else {
+      $('.btn-top').hide();
+    }
   });
 });

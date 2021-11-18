@@ -8,12 +8,19 @@
 
 $(document).ready(() => {
 
+  /* On 'submit' event:
+    1- Validate if tweet is empty
+    2- Validate if tweet exceeds length
+    3- Make a post request with the serialized data from textarea
+    4- Once done, load the tweets again to avoid refreshing
+    4- Empty out the textarea
+    5- Trigger an 'input' event for the counter to update/reset
+  */
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
     const $tweetText = $(this);
     const tweetText = $tweetText.serialize();
     const $textarea = $('#tweet-text');
-    console.log(tweetText);
     if (!$textarea.val() || $textarea.val() === "") {
       alert('Tweet cannot be empty!');
     } else if (tweetText.length > 140) {
@@ -26,12 +33,17 @@ $(document).ready(() => {
       })
         .then(() => {
           loadTweets();
+          console.log('Success!');
           $textarea.val('');
           $textarea.trigger('input');
         });
     }
   });
 
+  /* tweet:
+    1- Receive a single tweet object
+    2- Use AJAX to create an article element using passed data
+  */
   const tweet = (tweetObj) => {
     const { user, content, created_at } = tweetObj;
     const $tweet = $(
@@ -55,14 +67,22 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  /* renderTweets:
+    1- Receive an array of tweet objects
+    2- Iterate through the array and call 'tweet' on each object
+  */
   const renderTweets = (tweetsArr) => {
     for (const tweetObj of tweetsArr) {
       const $tweet = tweet(tweetObj);
       $('#tweets-area').prepend($tweet);
-      console.log('Tweeted!', $tweet);
     }
   };
 
+  /* loadTweets:
+    1- Make an AJAX GET request to our local-db on server
+    2- Once done, use the JSON data received to call renderTweets
+    * This will allow us to see the new content without refreshing *
+  */
   const loadTweets = () => {
     $.ajax('/tweets/', { method: 'GET' })
       .then(function(data) {
@@ -71,6 +91,6 @@ $(document).ready(() => {
       });
   };
   
-  // Test / driver code (temporary). Eventually will get this from the server.
+  // Load initial hardcoded tweets
   loadTweets();
 });

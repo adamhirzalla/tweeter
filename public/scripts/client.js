@@ -40,6 +40,19 @@ $(document).ready(() => {
     }
   });
 
+  /* escape:
+    1- Receive potentially unsafe string literal
+    2- Create a <div> element
+    3- Create a text node using passed test
+    4- Append that text node as a child to our created <div>
+    4- Return back the safe re-encoded/escaped HTML of that <div>
+  */
+  const escape = (text) => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+  };
+
   /* tweet:
     1- Receive a single tweet object
     2- Use AJAX to create an article element using passed data
@@ -56,7 +69,7 @@ $(document).ready(() => {
       <h3 class="handle">${user.handle}</h3>
     </header>
     <div class="text-area text-black strong">
-      <p class="ml-1">${content.text}</p>
+      <p class="ml-1">${escape(content.text)}</p>
     </div>
     <footer class="footer strong">
       <p class="small">${timeago.format(created_at)}</p>

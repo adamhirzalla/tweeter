@@ -7,9 +7,7 @@ $(document).ready(() => {
     2- Focus the text area for composing tweets
   */
   $('.btn-top').click(() => {
-    const $top = document.getElementById('top');
-    
-    $top.scrollIntoView();
+    window.scrollTo({top: 0});
     $('#tweet-text').focus();
   });
 
@@ -20,7 +18,6 @@ $(document).ready(() => {
   */
   $(window).scroll(function() {
     if ($(this).scrollTop() > 130) {
-      console.log($(this).scrollTop());
       $('body nav').removeClass('nav-sticky');
       $('.btn-top').show();
     } else {

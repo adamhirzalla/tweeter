@@ -6,9 +6,7 @@ $(document).ready(() => {
     2- Once done, focus the text area for composing tweets
   */
   $('.btn-toggle').click(() => {
-    const $top = document.getElementById('top');
-    
-    $top.scrollIntoView();
+    window.scrollTo({top: 0});
     $('.new-tweet').toggle('fast',()=>{
       $('#tweet-text').focus();
     });

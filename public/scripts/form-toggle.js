@@ -1,5 +1,6 @@
 $(document).ready(() => {
-
+  // Initial textarea hide
+  $('.new-tweet').hide();
   /* On create-new-tweet 'click' event:
     1- Scroll all the way top
     2- Toggle the new-tweet area (show/hide)

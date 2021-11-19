@@ -1,7 +1,7 @@
 $(document).ready(()=>{
 
   /* Counter: to show remaining characters within tweet textarea
-     * Upon any 'input' event, hide the error message until next submit *
+     * Upon any 'input' event, slide-up (hide) error message until next submit *
     1- On document ready, listen for 'input' events on #tweet-text
      * this === <textarea> *
     2- Save JQuery target for counter class in $counter

@@ -10,9 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Global layout styling */
 
 body {
   color: #545149;
@@ -20,11 +18,6 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  main {
    margin-left: 5%;
    margin-right: 5%;
@@ -33,12 +26,12 @@ body {
    flex-direction: column;
  }
 
+ /* Rules for Laptop/Desktop screens with AT LEAST 1024px width */
  @media only screen and (min-width: 1024px) {
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   main {
     margin-left: 1em;
     margin-right: 1em;
-    width: 730px;
+    width: 70%;
     height: auto;
     float: right;
   }

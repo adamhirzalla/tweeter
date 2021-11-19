@@ -42,7 +42,6 @@ $(document).ready(() => {
       })
         .then(() => {
           loadTweets();
-          console.log('Success!');
           $textarea.val('');
           $textarea.trigger('input');
         });
@@ -110,7 +109,6 @@ $(document).ready(() => {
       .then(function(data) {
         $('#tweets-area').empty();
         renderTweets(data);
-        console.log('Loaded fresh tweets: ', data);
       });
   };
   

@@ -34,53 +34,61 @@
   </head>
 
   <body id="top">
-    <!-- Top nav bar (fixed) -->
+
+    <!-- Top Nav Bar (fixed) - Start -->
     <nav class="flex-row center jc-sb nav-sticky">
+      <!-- Logo -->
       <div><span class="text-bungee">Tweeter</span></div>
-      
+      <!-- Compose a New Tweet -->
       <div class="flex-col center btn-toggle">
         <span class="text-source"><strong>Write</strong> a new tweet</span>
         <i class="fas fa-angle-double-down color-blue move"></i>
       </div>
-
     </nav>
+    <!-- Top Nav Bar (fixed) - End -->
+
+    <!-- Header (Avatar) - Start -->
     <header class="flex-col center animate">
       <div>
           <img class="main-avatar" src="/images/avatar.png"> 
       </div>
-      <br>
       <div>
           <h2 class="mt-0 mb-0 normal color-blue"><span class="strong color-white">Adam</span> Hirzalla</h2>
       </div>
     </header>
+    <!-- Header (Avatar) - End -->
 
-    <!-- Page-specific (main) content here -->
+    <!-- Main Content (Textarea/Tweets) - Start -->
     <main>
       <div class="btn-top grow-btn">
         <i class="fas fa-angle-double-up flex-row center"></i>
       </div>
-      <!-- Creating new tweets -->
+      <!-- Composing New Tweets Area - Start -->
       <section class="new-tweet">
-        <!-- Error message container -->
+        <!-- Error Message Prompt -->
         <span id="error" class="error">Error!</span>
+        <!-- New Tweets Textarea -->
         <div class="tweet-header mt-1 mb-1">
           <label for="tweet-text color-black"><strong>What are you humming about?</strong></label>
         </div>
         <form id="tweet-form" action="/tweets/" method="post">
-        <div class="text-area">
+          <div class="text-area">
             <textarea name="text" id="tweet-text" placeholder="Type here..."></textarea>
-        </div>
-        <div class="tweet-footer text-bungee">
+          </div>
+          <div class="tweet-footer text-bungee">
             <button class="grow-btn btn-black color-white" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
+          </div>
         </form>
       </section>
+      <!-- Composing New Tweets Area - End -->
       <br>
       <!-- Tweets articles -->
       <section id="tweets-area">
-        
+        <!-- Dynamic Tweets  -->
       </section>
     </main>
+    <!-- Main content (Textarea/Tweets) - End -->
+
   </body>
 </html>

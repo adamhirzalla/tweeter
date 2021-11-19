@@ -9,35 +9,45 @@ header img.main-avatar {
   border-style: outset;
 }
 
+/* Rules for Laptop/Desktop screens with AT LEAST 1024px width */
 @media only screen and (min-width: 1024px) {
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   body > header {
-    margin-left: 1em;
+    margin-left: 3%;
     margin-top: 40px;
-    width: 330px;
-    height: 330px;
-    border-radius: 50px;
+    width: 22%;
+    height: auto;
+    border-radius: 40px;
     float: left;
     position: fixed;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
-
+  .animate h2 {
+    font-size: 2vw;
+  }
+  .animate div {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
   header img.main-avatar {
-    width: 230px;
+    width: 95%;
     height: auto;
   }
   .animate {
     animation: 
-    rgb 1s infinite;
+    rgb-rotate 1s infinite;
   }
-  @keyframes rgb {
-    0%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
-    12.5%  {box-shadow: 2px 2px 4px yellow;transform: rotate(1deg)}
-    25%  {box-shadow: 2px 2px 4px blue;transform: rotate(2deg)}
-    37.5% {box-shadow: 2px 2px 4px green;transform: rotate(1deg)}
-    50%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
-    62.5%  {box-shadow: 2px 2px 4px yellow;transform: rotate(-1deg)}
-    75%  {box-shadow: 2px 2px 4px blue;transform: rotate(-2deg)}
-    87.5% {box-shadow: 2px 2px 4px green;transform: rotate(-1deg)}
-    100%   {box-shadow: 2px 2px 4px red;transform: rotate(0deg)}
+  /* RGB shadow effect + slight rotation */
+  @keyframes rgb-rotate {
+    0%     {box-shadow: 2px 2px 4px red; transform: rotate(0deg)}
+    12.5%  {box-shadow: 2px 2px 4px yellow; transform: rotate(1deg)}
+    25%    {box-shadow: 2px 2px 4px blue; transform: rotate(2deg)}
+    37.5%  {box-shadow: 2px 2px 4px green; transform: rotate(1deg)}
+    50%    {box-shadow: 2px 2px 4px red; transform: rotate(0deg)}
+    62.5%  {box-shadow: 2px 2px 4px yellow; transform: rotate(-1deg)}
+    75%    {box-shadow: 2px 2px 4px blue; transform: rotate(-2deg)}
+    87.5%  {box-shadow: 2px 2px 4px green; transform: rotate(-1deg)}
+    100%   {box-shadow: 2px 2px 4px red; transform: rotate(0deg)}
   }
 }

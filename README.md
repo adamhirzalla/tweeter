@@ -24,7 +24,7 @@ This project also uses Node and Express on the back-end side, which was used as 
 !["Demo 1 (Tablet Mode)"](https://i.imgur.com/DRpbxPq.gif)
 
 - Demo 2 - Desktop Mode:
-!["Demo 2 (Desktop Mode)"](https://i.imgur.com/xwEL4ah.gif)
+!["Demo 2 (Desktop Mode)"](https://i.imgur.com/1OMALfH.gif)
 
 - Tablet View:
 !["Tablet View"](https://github.com/adamhirzalla/tweeter/blob/master/docs/Main-pic.png)

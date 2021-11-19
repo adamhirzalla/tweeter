@@ -22,14 +22,14 @@ $(document).ready(() => {
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
     const $tweetText = $(this);
-    const tweetText = $tweetText.serialize();
+    const serialized = $tweetText.serialize();
     const $textarea = $('#tweet-text');
     const input = $textarea.val();
     if (!input || !input.trim().length) {
       $textarea.focus();
       $('#error').text('Tweet cannot be empty!');
       $('#error').slideDown('fast');
-    } else if (tweetText.length > 140) {
+    } else if (input.length > 140) {
       $textarea.focus();
       $('#error').text('Tweet length cannot exceed 140 characters!');
       $('#error').slideDown('fast');
@@ -38,7 +38,7 @@ $(document).ready(() => {
       $.ajax({
         type: "POST",
         url: '/tweets/',
-        data: tweetText,
+        data: serialized,
       })
         .then(() => {
           loadTweets();

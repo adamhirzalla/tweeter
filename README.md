@@ -56,6 +56,7 @@ This project also uses Node and Express on the back-end side, which was used as 
 
 ## Getting Started
 
+- You can check and use the app at [tweeter.hirzalla.ca](https://tweeter-project-lhl.herokuapp.com/)
 - Install all dependencies (using the `npm i` command).
 - Run the development web server using the `npm start` command.
 - Navigate to http://localhost:8080/ to get started and start Tweeting!
